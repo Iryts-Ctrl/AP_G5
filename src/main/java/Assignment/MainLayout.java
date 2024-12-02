@@ -54,20 +54,26 @@ public class MainLayout {
 
     @FXML
     public void loadFitnessGoalPage() {
-        loadPage("/Assignment/FitnessGoal.fxml");
+        FitnessGoal controller = loadPage("/Assignment/FitnessGoal.fxml");
         highlightButton(fitnessGoalButton);
+        if (controller != null){
+            controller.loadFitnessGoalsFromFile();
+        }
+
     }
 
-    public void loadPage(String fxmlPath) {
+    public <T> T loadPage(String fxmlPath) {
+        T controller = null;
         try {
-            //Node page= FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlPath)));
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Node page = loader.load();
             mainContentPane.getChildren().setAll(page);
+            controller = loader.getController();
             System.out.println("Page loaded successfully");
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return controller;
     }
 
     private void highlightButton(Button selectedButton) {
