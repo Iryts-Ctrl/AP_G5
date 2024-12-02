@@ -20,8 +20,11 @@ public class HomePage extends Application{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("MainLayout.fxml"));
             AnchorPane root = loader.load();
 
+
             primaryStage.setTitle("Fitness App");
-            primaryStage.setScene(new Scene(root, 600, 450));
+            primaryStage.setScene(new Scene(root, 1024, 700));
+            primaryStage.centerOnScreen();
+
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
