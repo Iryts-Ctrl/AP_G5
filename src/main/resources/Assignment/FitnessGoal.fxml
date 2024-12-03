@@ -29,7 +29,7 @@
                            <children>
                               <Label prefHeight="21.0" prefWidth="80.0" text="Your Weight" />
                               <VBox prefHeight="56.0" prefWidth="147.0" />
-                              <TextField fx:id="currentWeightField" onAction="#updateFitnessGoal" promptText="(kg)" />
+                              <TextField fx:id="currentWeightField" onAction="#saveFitnessGoalsToFile" promptText="(kg)" />
                            </children>
                         </VBox>
                         <VBox prefHeight="196.0" prefWidth="132.0" />
@@ -37,7 +37,7 @@
                            <children>
                               <Label text="Target Weight" />
                               <HBox prefHeight="56.0" prefWidth="147.0" />
-                              <TextField fx:id="targetWeightField" onAction="#updateFitnessGoal" prefHeight="25.0" prefWidth="167.0" promptText="(kg)" />
+                              <TextField fx:id="targetWeightField" onAction="#saveFitnessGoalsToFile" prefHeight="25.0" prefWidth="167.0" promptText="(kg)" />
                            </children>
                         </VBox>
                      </children>
@@ -55,7 +55,7 @@
                               <Font name="Arial" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="chestField" onAction="#updateFitnessGoal" prefHeight="25.0" prefWidth="105.0" promptText="Chest Target (cm)" />
+                        <TextField fx:id="chestField" onAction="#saveFitnessGoalsToFile" prefHeight="25.0" prefWidth="105.0" promptText="Chest Target (cm)" />
                      </children>
                   </VBox>
                   <HBox prefHeight="171.0" prefWidth="120.0" />
@@ -66,7 +66,7 @@
                               <Font name="Arial" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="waistField" onAction="#updateFitnessGoal" prefHeight="25.0" prefWidth="55.0" promptText="Waist Target (cm)" />
+                        <TextField fx:id="waistField" onAction="#saveFitnessGoalsToFile" prefHeight="25.0" prefWidth="55.0" promptText="Waist Target (cm)" />
                      </children>
                   </VBox>
                   <HBox prefHeight="171.0" prefWidth="129.0" />
@@ -77,7 +77,7 @@
                               <Font name="Arial" size="12.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="hipField" onAction="#updateFitnessGoal" prefHeight="25.0" prefWidth="55.0" promptText="Hips Target (cm)" />
+                        <TextField fx:id="hipField" onAction="#saveFitnessGoalsToFile" prefHeight="25.0" prefWidth="55.0" promptText="Hips Target (cm)" />
                      </children>
                   </VBox>
                </children>
@@ -89,7 +89,7 @@
                   <Label prefHeight="143.0" prefWidth="136.0" text="Calories Goals Per Day" />
                   <VBox alignment="CENTER" prefHeight="139.0" prefWidth="174.0" style="-fx-background-color: FFE9EE;">
                      <children>
-                        <TextField fx:id="targetCalorieField" onAction="#updateFitnessGoal" prefWidth="174.0" promptText="Calories Target (cals)" />
+                        <TextField fx:id="targetCalorieField" onAction="#saveFitnessGoalsToFile" prefWidth="174.0" promptText="Calories Target (cals)" />
                      </children>
                   </VBox>
                   <VBox prefHeight="139.0" prefWidth="43.0" style="-fx-background-color: FFE9EE;" />
@@ -103,7 +103,7 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: FFE9EE;">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#calculateWeightProgress" prefHeight="25.0" prefWidth="58.0" text="Save" />
+                              <Button mnemonicParsing="false" onAction="#saveFitnessGoalsToFile" prefHeight="25.0" prefWidth="58.0" text="Save" />
                            </children>
                         </VBox>
                      </children>

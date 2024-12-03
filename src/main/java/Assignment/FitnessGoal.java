@@ -6,10 +6,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class FitnessGoal {
@@ -143,6 +140,30 @@ public class FitnessGoal {
                 ", currentWeight=" + currentWeight +
                 '}';
     }
+
+    @FXML
+    public void saveFitnessGoalsToFile(){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\User\\IdeaProjects\\AP_G5\\src\\main\\java\\Assignment\\fitnessGoals.txt"))){
+            writer.write("Current Weight: " + currentWeightField.getText());
+            writer.newLine();
+            writer.write("Target Weight: " + targetWeightField.getText());
+            writer.newLine();
+            writer.write("Chest: " + chestField.getText());
+            writer.newLine();
+            writer.write("Waist: " + waistField.getText());
+            writer.newLine();
+            writer.write("Hips: " + hipField.getText());
+            writer.newLine();
+            writer.write("Calories: " +targetCalorieField.getText());
+            writer.newLine();
+            System.out.println("Goals saved successfully.");
+
+            calculateWeightProgress();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     public void loadFitnessGoalsFromFile() {

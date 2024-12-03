@@ -58,6 +58,7 @@ public class MainLayout {
         highlightButton(fitnessGoalButton);
         if (controller != null){
             controller.loadFitnessGoalsFromFile();
+            controller.calculateWeightProgress();
         }
 
     }
