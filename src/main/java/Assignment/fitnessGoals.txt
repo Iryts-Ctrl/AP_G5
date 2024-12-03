@@ -1,4 +1,4 @@
-Current Weight: 61
+Current Weight: 60
 Target Weight: 51
 Chest: 80
 Waist: 30
