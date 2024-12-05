@@ -1,15 +1,12 @@
 package Assignment;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
-import java.util.Objects;
 
 //SideBar
 public class MainLayout {
@@ -54,7 +51,7 @@ public class MainLayout {
 
     @FXML
     public void loadFitnessGoalPage() {
-        FitnessGoal controller = loadPage("/Assignment/FitnessGoal.fxml");
+        FitnessGoalController controller = loadPage("/Assignment/FitnessGoal.fxml");
         highlightButton(fitnessGoalButton);
         if (controller != null){
             controller.loadFitnessGoalsFromFile();

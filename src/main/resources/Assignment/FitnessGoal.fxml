@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="650.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assignment.FitnessGoal">
+<StackPane prefHeight="650.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Assignment.FitnessGoalController">
    <children>
       <VBox prefHeight="217.0" prefWidth="360.0">
          <children>
@@ -27,9 +27,13 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="206.0" prefWidth="150.0">
                            <children>
-                              <Label prefHeight="21.0" prefWidth="80.0" text="Your Weight" />
-                              <VBox prefHeight="56.0" prefWidth="147.0" />
-                              <TextField fx:id="currentWeightField" onAction="#saveFitnessGoalsToFile" promptText="(kg)" />
+                              <Label prefHeight="21.0" prefWidth="80.0" text="Initaial Weight" />
+                              <VBox alignment="CENTER" prefHeight="56.0" prefWidth="147.0">
+                                 <children>
+                                    <TextField fx:id="initialWeightField" prefHeight="5.0" prefWidth="161.0" promptText="InitialWeight(Kg)" />
+                                    <Label text="Current Weight" />
+                                 </children></VBox>
+                              <TextField fx:id="currentWeightField" onAction="#saveFitnessGoalsToFile" promptText="CurrentWeight(kg)" />
                            </children>
                         </VBox>
                         <VBox prefHeight="196.0" prefWidth="132.0" />
