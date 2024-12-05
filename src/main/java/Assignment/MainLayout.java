@@ -45,8 +45,14 @@ public class MainLayout {
 
     @FXML
     public void loadHomePage() {
-        loadPage("/Assignment/HomePage.fxml");
+        HomePage controller = loadPage("/Assignment/HomePage.fxml");
         highlightButton(homeButton);
+        if (controller != null){
+            controller.loadFitnessGoalToHome();
+            controller.loadExerciseToHome();
+            controller.loadNutritionToHome();
+            controller.loadUsernameToHome();
+        }
     }
 
     @FXML
