@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Assignment.DailyActivitiesController" prefHeight="400" prefWidth="600">
+    <children>
+        <VBox alignment="CENTER" spacing="20" prefWidth="600" prefHeight="400">
+            <!-- Active Time Chart -->
+            <VBox alignment="CENTER">
+                <Label text="Active time" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                <BarChart fx:id="activeTimeChart" prefWidth="500" prefHeight="200" styleClass="custom-bar-chart">
+                    <xAxis>
+                        <CategoryAxis fx:id="timeXAxis" label="Time of Day" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="timeYAxis" label="(h)" />
+                    </yAxis>
+                </BarChart>
+            </VBox>
+
+            <!-- Activity Calories Chart -->
+            <VBox alignment="CENTER">
+                <Label text="Activity calories" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                <BarChart fx:id="activityCaloriesChart" prefWidth="500" prefHeight="200" styleClass="custom-bar-chart">
+                    <xAxis>
+                        <CategoryAxis fx:id="caloriesXAxis" label="Time of Day" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="caloriesYAxis" label="(h)" />
+                    </yAxis>
+                </BarChart>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
+
+

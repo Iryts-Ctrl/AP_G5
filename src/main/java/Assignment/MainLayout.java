@@ -66,6 +66,12 @@ public class MainLayout {
 
     }
 
+    @FXML
+    public void loadDailyActivitiesPage() {
+        DailyActivitiesController controller = loadPage("/Assignment/DailyActivities.fxml");
+        highlightButton(dailyActivitiesButton);
+    }
+
     public <T> T loadPage(String fxmlPath) {
         T controller = null;
         try {
